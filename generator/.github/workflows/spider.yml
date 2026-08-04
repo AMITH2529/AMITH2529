@@ -26,15 +26,8 @@ jobs:
         with:
           github_user_name: AMITH2529
           
-          # CONFIGURATION FOR SPIDER THEME
-          # This sets the icon to a spider and the trail to a white web.
-          gif_out_path: dist/github-contribution-grid-spider.gif
-          svg_out_path: dist/github-contribution-grid-spider.svg
-          
           # Additional configuration to make it look like a web
-          # color_snake: '#ffffff' makes the web white
-          # color_dots: '#161b22,#0e4429,#006d32,#26a641,#39d353' (GitHub dark default colors)
-          # The 'snake' here is replaced by the spider asset in the action.
+          # color_snake: '#ffffff' makes the web white (snake is replaced by spider asset in action)
           outputs: |
             dist/github-contribution-grid-spider.svg?color_snake=#ffffff
             dist/github-contribution-grid-spider-dark.svg?color_snake=#ffffff&palette=github-dark
