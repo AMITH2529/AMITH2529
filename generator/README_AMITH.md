@@ -90,8 +90,6 @@ A Python-based application designed to dynamically generate playlists based on e
 
 <br>
 
-<br>
-
 <details>
 <summary><b>💻 Click to Initialize Spidey-Sense Terminal Console</b></summary>
 
