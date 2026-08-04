@@ -1,40 +1,25 @@
-name: Generate Spider Contribution Animation
+name: Generate Spider Path
 
 on:
-  # Run automatically every 24 hours
   schedule:
-    - cron: "0 0 * * *" 
-  
-  # Allow manual execution
+    - cron: "0 */12 * * *"
   workflow_dispatch:
-  
-  # Run on every push to the main branch
-  push:
-    branches:
-    - main
+
+permissions:
+  contents: write
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
-    
+
     steps:
-      # Generates an animation from a GitHub user's contributions graph.
-      # We configure it to use a 'spider' icon and a 'grayscale' (white) web color.
-      - name: generate github-contribution-grid-spider.svg
-        uses: Platane/snk/svg-only@v3
+      - uses: Platane/snk@v3
         with:
           github_user_name: AMITH2529
-          
-          # Additional configuration to make it look like a web
-          # color_snake: '#ffffff' makes the web white (snake is replaced by spider asset in action)
           outputs: |
-            dist/github-contribution-grid-spider.svg?color_snake=#ffffff
-            dist/github-contribution-grid-spider-dark.svg?color_snake=#ffffff&palette=github-dark
-          
-      # Push the content of the 'dist' folder to a new branch named 'output'
-      - name: push github-contribution-grid-spider.svg to the output branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
+            dist/github-contribution-grid-snake.svg?palette=github-dark&color_snake=%23E23636&color_dots=%230D1117,%230d1b2a,%231b263b,%23415a77,%230051C8
+
+      - uses: crazy-max/ghaction-github-pages@v4
         with:
           target_branch: output
           build_dir: dist
