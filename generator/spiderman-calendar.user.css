@@ -1,0 +1,71 @@
+/* ==UserStyle==
+@name           GitHub Spider-Man Contribution Graph Theme
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Customizes the GitHub contribution calendar with a crawling Spider-Man and red/blue theme colors.
+@author         Antigravity
+@match          https://github.com/*
+==/UserStyle== */
+
+@-moz-document domain("github.com") {
+  /* Target the calendar graph container to position Spidey */
+  .js-calendar-graph {
+    position: relative !important;
+    border: 1.5px solid #e31b23 !important;
+    border-radius: 6px !important;
+    padding: 18px !important;
+    box-shadow: 0 0 15px rgba(227, 27, 35, 0.15) !important;
+  }
+
+  /* Add crawling Spider-Man on top of the graph */
+  .js-calendar-graph::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -21px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 200px !important;
+    height: 40px !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 40" width="150" height="40"><line x1="0" y1="22" x2="52" y2="14" stroke="%23ffffff" stroke-width="1.5" stroke-dasharray="2,2" opacity="0.8" /><line x1="98" y1="14" x2="150" y2="22" stroke="%23ffffff" stroke-width="1.5" stroke-dasharray="2,2" opacity="0.8" /><path d="M 50,22 Q 42,12 36,18" fill="none" stroke="%230051c8" stroke-width="3" stroke-linecap="round" /><path d="M 36,18 L 30,28" fill="none" stroke="%23e31b23" stroke-width="3" stroke-linecap="round" /><path d="M 52,28 Q 44,35 38,32" fill="none" stroke="%230051c8" stroke-width="3" stroke-linecap="round" /><path d="M 38,32 L 32,38" fill="none" stroke="%23e31b23" stroke-width="3" stroke-linecap="round" /><path d="M 90,22 Q 98,12 104,18" fill="none" stroke="%230051c8" stroke-width="3" stroke-linecap="round" /><path d="M 104,18 L 110,28" fill="none" stroke="%23e31b23" stroke-width="3" stroke-linecap="round" /><path d="M 88,28 Q 96,35 102,32" fill="none" stroke="%230051c8" stroke-width="3" stroke-linecap="round" /><path d="M 102,32 L 108,38" fill="none" stroke="%23e31b23" stroke-width="3" stroke-linecap="round" /><rect x="52" y="16" width="36" height="14" rx="7" fill="%23e31b23" stroke="black" stroke-width="1" /><rect x="60" y="16" width="20" height="14" fill="%230051c8" /><path d="M 70,23 L 70,20 M 68,22 L 72,22" stroke="black" stroke-width="1.5" /><ellipse cx="70" cy="11" rx="10" ry="8" fill="%23e31b23" stroke="black" stroke-width="1" /><path d="M 64,11 Q 67,8 69,12 Q 67,13 64,11 Z" fill="white" stroke="black" stroke-width="0.8" /><path d="M 76,11 Q 73,8 71,12 Q 73,13 76,11 Z" fill="white" stroke="black" stroke-width="0.8" /></svg>') !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    z-index: 10 !important;
+  }
+
+  /* Target the contributions graph squares for custom Spider-Man colors */
+  /* Level 0 (no contributions) */
+  .ContributionCalendar-day[data-level="0"] {
+    fill: #161b22 !important;
+    background-color: #161b22 !important;
+  }
+  
+  /* Level 1 */
+  .ContributionCalendar-day[data-level="1"] {
+    fill: #0c2340 !important;
+    background-color: #0c2340 !important;
+  }
+  
+  /* Level 2 */
+  .ContributionCalendar-day[data-level="2"] {
+    fill: #1d4ed8 !important;
+    background-color: #1d4ed8 !important;
+  }
+  
+  /* Level 3 */
+  .ContributionCalendar-day[data-level="3"] {
+    fill: #e31b23 !important;
+    background-color: #e31b23 !important;
+  }
+  
+  /* Level 4 (most contributions) */
+  .ContributionCalendar-day[data-level="4"] {
+    fill: #eab308 !important;
+    background-color: #eab308 !important;
+  }
+
+  /* Custom tooltips matching the theme */
+  .tooltipped::after {
+    background: #e31b23 !important;
+    color: #ffffff !important;
+  }
+}
