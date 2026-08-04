@@ -1,6 +1,6 @@
 <div align="center">
   <!-- Exact Spider-Man Header Banner matching your custom city skyline graphic -->
-  <img src="https://raw.githubusercontent.com/AMITH2529/AMITH2529/main/art/spiderman_banner_exact.png" alt="Friendly Neighborhood Developer: AMITH RAJ V" width="100%" />
+  <img src="https://raw.githubusercontent.com/AMITH2529/AMITH2529/main/art/spiderman_banner_exact.svg" alt="Friendly Neighborhood Developer: AMITH RAJ V" width="100%" />
 </div>
 
 <h3 align="center">🕸️ Aspiring AI Engineer | Generative AI & Data Science 🕸️</h3>

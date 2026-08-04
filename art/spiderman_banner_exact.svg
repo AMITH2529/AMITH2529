@@ -22,11 +22,64 @@
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
       <feDropShadow dx="3" dy="4" stdDeviation="0" flood-color="#000000" flood-opacity="1" />
     </filter>
+
+    <style>
+      @keyframes swing-spidey {
+        0% { transform: translate(90px, 30px) rotate(-1.5deg); }
+        50% { transform: translate(92px, 34px) rotate(1.5deg); }
+        100% { transform: translate(90px, 30px) rotate(-1.5deg); }
+      }
+      @keyframes pulse-web {
+        0% { stroke-width: 2.2; opacity: 0.8; }
+        50% { stroke-width: 3.2; opacity: 1.0; }
+        100% { stroke-width: 2.2; opacity: 0.8; }
+      }
+      @keyframes twinkle-star {
+        0% { opacity: 0.2; }
+        50% { opacity: 1.0; }
+        100% { opacity: 0.2; }
+      }
+      @keyframes window-glow {
+        0% { fill: #1a2035; }
+        30% { fill: #eab308; }
+        70% { fill: #fef08a; }
+        100% { fill: #1a2035; }
+      }
+      .anim-spidey {
+        animation: swing-spidey 4s ease-in-out infinite;
+        transform-origin: 125px 0px;
+      }
+      .anim-web {
+        animation: pulse-web 4s ease-in-out infinite;
+      }
+      .star {
+        fill: #ffffff;
+        animation: twinkle-star 3s ease-in-out infinite;
+      }
+      .star-fast { animation-duration: 1.5s; }
+      .star-slow { animation-duration: 5s; }
+      .window {
+        animation: window-glow 6s infinite alternate;
+      }
+      .win-offset-1 { animation-delay: 1.5s; }
+      .win-offset-2 { animation-delay: 3s; }
+      .win-offset-3 { animation-delay: 4.5s; }
+    </style>
   </defs>
 
   <!-- Sky Background -->
   <rect width="1200" height="300" fill="url(#sky-grad)" />
   <rect width="1200" height="300" fill="url(#sky-dots)" />
+
+  <!-- Twinkling Stars -->
+  <circle cx="150" cy="80" r="1.5" class="star star-fast" />
+  <circle cx="280" cy="50" r="2.0" class="star star-slow" />
+  <circle cx="450" cy="120" r="1.5" class="star" />
+  <circle cx="720" cy="60" r="2.5" class="star" />
+  <circle cx="880" cy="110" r="1.5" class="star star-slow" />
+  <circle cx="1020" cy="40" r="2.0" class="star star-fast" />
+  <circle cx="1140" cy="90" r="1.5" class="star" />
+
 
   <!-- Dithered/Halftone Skyline transition -->
   <g fill="#7a0010" opacity="0.3">
@@ -93,11 +146,27 @@
     L 1200 300 Z" 
     fill="url(#city-grad)" />
 
+  <!-- Animated Foreground Windows -->
+  <g fill="#1a2035">
+    <rect x="120" y="180" width="3" height="5" class="window win-offset-1" />
+    <rect x="125" y="180" width="3" height="5" class="window win-offset-2" />
+    <rect x="120" y="190" width="3" height="5" class="window win-offset-3" />
+    <rect x="125" y="190" width="3" height="5" class="window" />
+    <rect x="230" y="195" width="4" height="6" class="window win-offset-2" />
+    <rect x="240" y="195" width="4" height="6" class="window win-offset-3" />
+    <rect x="230" y="210" width="4" height="6" class="window" />
+    <rect x="240" y="210" width="4" height="6" class="window win-offset-1" />
+    <rect x="610" y="210" width="3" height="5" class="window win-offset-3" />
+    <rect x="620" y="210" width="3" height="5" class="window win-offset-1" />
+    <rect x="610" y="220" width="3" height="5" class="window" />
+    <rect x="620" y="220" width="3" height="5" class="window win-offset-2" />
+  </g>
+
   <!-- Spider-Man Web Shooting Line -->
-  <path d="M 125,48 L 220,0" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.9" />
+  <path class="anim-web" d="M 125,48 L 220,0" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.9" />
 
   <!-- Swinging Spider-Man Cartoon (Left Side) -->
-  <g transform="translate(90, 30)">
+  <g class="anim-spidey">
     <!-- Right leg (bent up) -->
     <path d="M 30,55 Q 15,62 5,55 Q 0,45 10,40" fill="#0051C8" stroke="#000000" stroke-width="2" />
     <path d="M 5,55 Q -2,65 -5,75 Q -5,80 -2,80 Q 5,80 8,70" fill="#E23636" stroke="#000000" stroke-width="2" />
