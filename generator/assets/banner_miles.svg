@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 350" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad-miles" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050608" />
+      <stop offset="60%" stop-color="#0c0e12" />
+      <stop offset="100%" stop-color="#180408" />
+    </linearGradient>
+
+    <!-- Spray Paint Spidey Red Glow -->
+    <radialGradient id="red-spray" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff0044" stop-opacity="0.4" />
+      <stop offset="80%" stop-color="#ff0044" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#ff0044" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Glitch Filter -->
+    <filter id="glitch" x="-10%" y="-10%" width="120%" height="120%">
+      <feOffset dx="-2" dy="1" in="SourceGraphic" result="offset1" />
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 0" in="offset1" result="color1" />
+      
+      <feOffset dx="2" dy="-1" in="SourceGraphic" result="offset2" />
+      <feColorMatrix type="matrix" values="0 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0" in="offset2" result="color2" />
+
+      <feMerge>
+        <feMergeNode in="color1" />
+        <feMergeNode in="color2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- Halftone dots pattern -->
+    <pattern id="halftone" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <circle cx="2" cy="2" r="1.5" fill="#ffffff" fill-opacity="0.04" />
+      <circle cx="8" cy="8" r="1" fill="#ff0044" fill-opacity="0.06" />
+    </pattern>
+
+    <!-- Brick wall pattern -->
+    <pattern id="bricks" width="60" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 0 0 L 60 0 M 0 12 L 60 12 M 30 0 L 30 12 M 0 12 L 0 24 M 60 12 L 60 24" 
+            stroke="#ffffff" stroke-opacity="0.015" stroke-width="1.5" fill="none" />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="350" fill="url(#bg-grad-miles)" />
+  <rect width="1000" height="350" fill="url(#bricks)" />
+  <rect width="1000" height="350" fill="url(#halftone)" />
+
+  <!-- Neon Spray Paint Backdrop -->
+  <circle cx="800" cy="175" r="220" fill="url(#red-spray)" />
+  <circle cx="200" cy="120" r="180" fill="#00ffcc" fill-opacity="0.05" />
+
+  <!-- Spider-Verse Glitch Web Lines -->
+  <g stroke="#ff0044" stroke-opacity="0.12" stroke-width="1">
+    <line x1="800" y1="175" x2="100" y2="40" />
+    <line x1="800" y1="175" x2="200" y2="300" />
+    <line x1="800" y1="175" x2="900" y2="30" />
+    <line x1="800" y1="175" x2="600" y2="320" />
+    
+    <!-- Glitched Web Rings -->
+    <path d="M 680,175 A 120,120 0 0,1 800,295 M 800,55 A 120,120 0 0,1 920,175" fill="none" stroke-dasharray="8, 4" />
+    <path d="M 560,175 A 240,240 0 0,1 800,415 M 800,-65 A 240,240 0 0,1 1040,175" fill="none" stroke-opacity="0.06" />
+  </g>
+
+  <!-- Spray Paint Splatter Effects -->
+  <g fill="#ff0044" fill-opacity="0.3">
+    <circle cx="840" cy="90" r="3" />
+    <circle cx="830" cy="82" r="1.5" />
+    <circle cx="750" cy="270" r="4.5" />
+    <circle cx="755" cy="285" r="2" />
+    <circle cx="760" cy="278" r="1" />
+    <circle cx="680" cy="230" r="2.5" />
+    <circle cx="910" cy="180" r="4" />
+    <path d="M 780,215 Q 778,230 777,245" stroke="#ff0044" stroke-width="1.5" opacity="0.4" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Miles Morales Spray Logo (Graffiti Spider Logo) -->
+  <g transform="translate(730, 95)" filter="url(#glitch)">
+    <!-- Custom grungy spray path spider -->
+    <!-- Head -->
+    <path d="M 65,15 C 65,10 75,10 75,15 C 75,20 65,20 65,15 Z" fill="#ff0044" />
+    <!-- Body -->
+    <path d="M 62,26 Q 52,48 57,66 Q 63,80 73,76 Q 84,72 82,58 Q 80,44 72,28 Z" fill="#ff0044" />
+    
+    <!-- Legs (Left) -->
+    <path d="M 60,33 C 40,22 25,12 18,5" stroke="#ff0044" stroke-width="4.5" fill="none" stroke-linecap="round" />
+    <path d="M 58,45 C 32,38 20,33 10,25" stroke="#ff0044" stroke-width="4.5" fill="none" stroke-linecap="round" />
+    <path d="M 57,58 C 30,68 20,80 12,98" stroke="#ff0044" stroke-width="4" fill="none" stroke-linecap="round" />
+    <path d="M 59,70 C 38,88 28,105 22,122" stroke="#ff0044" stroke-width="4" fill="none" stroke-linecap="round" />
+    
+    <!-- Legs (Right) -->
+    <path d="M 76,31 C 96,20 110,12 118,5" stroke="#ff0044" stroke-width="4.5" fill="none" stroke-linecap="round" />
+    <path d="M 79,43 C 105,36 118,31 128,25" stroke="#ff0044" stroke-width="4.5" fill="none" stroke-linecap="round" />
+    <path d="M 80,56 C 107,66 117,78 125,98" stroke="#ff0044" stroke-width="4" fill="none" stroke-linecap="round" />
+    <path d="M 78,68 C 98,86 108,103 114,122" stroke="#ff0044" stroke-width="4" fill="none" stroke-linecap="round" />
+  </g>
+
+  <!-- Left Side: Spider-Verse Glitch Badge/Sticker -->
+  <g transform="translate(60, 50)">
+    <!-- Neon cyan glitch box -->
+    <rect x="-5" y="-5" width="135" height="135" rx="10" fill="none" stroke="#00ffcc" stroke-width="2.5" stroke-opacity="0.7" filter="url(#glitch)" />
+    <!-- Spray painted base -->
+    <rect x="0" y="0" width="125" height="125" rx="8" fill="#12131a" stroke="#ff0044" stroke-width="2" />
+    <!-- Graffiti Tag inside box -->
+    <text x="62" y="55" font-family="'Courier New', monospace" font-size="28" font-weight="900" fill="#00ffcc" text-anchor="middle" filter="url(#glitch)">AI</text>
+    <text x="62" y="90" font-family="'Courier New', monospace" font-size="28" font-weight="900" fill="#ff0044" text-anchor="middle" filter="url(#glitch)">SPIDY</text>
+  </g>
+
+  <!-- Tech Stats Overlay line -->
+  <line x1="225" y1="135" x2="520" y2="135" stroke="#00ffcc" stroke-width="2" stroke-opacity="0.8" filter="url(#glitch)" />
+  <circle cx="225" cy="135" r="4" fill="#00ffcc" />
+  <circle cx="520" cy="135" r="4" fill="#ff0044" />
+
+  <!-- Text Section -->
+  <g transform="translate(225, 0)">
+    <!-- Name with glitch styling -->
+    <text x="0" y="115" 
+          font-family="Impact, Charcoal, sans-serif" 
+          font-size="78" 
+          font-weight="900" 
+          letter-spacing="4" 
+          fill="#ffffff" 
+          filter="url(#glitch)">AMITH</text>
+
+    <!-- Role (Neon Spidey sense style) -->
+    <text x="0" y="180" 
+          font-family="system-ui, -apple-system, sans-serif" 
+          font-size="25" 
+          font-weight="800" 
+          letter-spacing="1.5" 
+          fill="#ff0044" 
+          filter="url(#glitch)">FRIENDLY NEIGHBORHOOD AI ENGINEER</text>
+
+    <!-- Bio / Subtitle -->
+    <text x="0" y="225" 
+          font-family="Georgia, serif" 
+          font-size="16" 
+          font-style="italic" 
+          fill="#8e9bb0">"With great data comes great responsibility."</text>
+
+    <!-- Badges Grid (Graffiti Style) -->
+    <g transform="translate(0, 260)">
+      <!-- PyTorch/ML Badge -->
+      <rect x="0" y="0" width="135" height="28" fill="#ff0044" rx="4" />
+      <text x="67" y="18" font-family="monospace" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">PYTORCH &amp; LLMS</text>
+
+      <!-- Agentic AI Badge -->
+      <rect x="150" y="0" width="130" height="28" fill="#12131a" stroke="#00ffcc" stroke-width="1.5" rx="4" />
+      <text x="215" y="18" font-family="monospace" font-size="11" font-weight="900" fill="#00ffcc" text-anchor="middle">AGENTIC SYSTEMS</text>
+
+      <!-- Institution Badge -->
+      <rect x="295" y="0" width="145" height="28" fill="#20222a" rx="4" />
+      <text x="367" y="18" font-family="monospace" font-size="11" font-weight="900" fill="#ffffff" text-anchor="middle">AIML @ OXFORD BLR</text>
+    </g>
+  </g>
+
+</svg>

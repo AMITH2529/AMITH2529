@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="100%" height="100%">
+  <defs>
+    <!-- Background Red Sky Gradient -->
+    <linearGradient id="sky-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#7a0010" />
+      <stop offset="40%" stop-color="#b80f22" />
+      <stop offset="100%" stop-color="#e31b23" />
+    </linearGradient>
+
+    <!-- Dark Blue Silhouette / Contrast Gradient -->
+    <linearGradient id="city-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0f1d" />
+      <stop offset="100%" stop-color="#050810" />
+    </linearGradient>
+
+    <!-- Halftone dots pattern for retro comic look -->
+    <pattern id="sky-dots" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="1.5" fill="#ffffff" fill-opacity="0.15" />
+    </pattern>
+
+    <!-- Drop Shadow Filter for Text -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="3" dy="4" stdDeviation="0" flood-color="#000000" flood-opacity="1" />
+    </filter>
+  </defs>
+
+  <!-- Sky Background -->
+  <rect width="1200" height="300" fill="url(#sky-grad)" />
+  <rect width="1200" height="300" fill="url(#sky-dots)" />
+
+  <!-- Dithered/Halftone Skyline transition -->
+  <g fill="#7a0010" opacity="0.3">
+    <rect x="0" y="220" width="1200" height="80" />
+    <circle cx="100" cy="210" r="15" />
+    <circle cx="300" cy="210" r="25" />
+    <circle cx="500" cy="215" r="10" />
+    <circle cx="750" cy="210" r="30" />
+    <circle cx="950" cy="215" r="15" />
+    <circle cx="1150" cy="210" r="20" />
+  </g>
+
+  <!-- Detailed City Skyline Silhouette (Red/Dark Crimson) -->
+  <path d="
+    M 0 300 
+    L 0 200 
+    L 25 200 L 25 180 L 45 180 L 45 200 
+    L 65 200 L 65 150 L 85 150 L 85 120 L 90 120 L 90 150 L 105 150 L 105 200
+    L 125 200 L 125 170 L 165 170 L 165 200
+    L 185 200 L 185 140 L 195 140 L 195 110 L 200 110 L 200 140 L 215 140 L 215 200
+    L 240 200 L 240 185 L 280 185 L 280 200
+    L 300 200 L 300 160 L 330 160 L 330 200
+    L 355 200 L 355 130 L 375 130 L 375 90 L 380 90 L 380 130 L 395 130 L 395 200
+    L 420 200 L 420 175 L 460 175 L 460 200
+    L 485 200 L 485 150 L 515 150 L 515 200
+    L 535 200 L 535 120 L 555 120 L 555 80 L 560 80 L 560 120 L 575 120 L 575 200
+    L 600 200 L 600 170 L 640 170 L 640 200
+    L 665 200 L 665 145 L 695 145 L 695 200
+    L 715 200 L 715 110 L 735 110 L 740 70 L 745 110 L 760 110 L 760 200
+    L 780 200 L 780 180 L 820 180 L 820 200
+    L 845 200 L 845 150 L 875 150 L 875 200
+    L 895 200 L 895 130 L 915 130 L 920 90 L 925 130 L 940 130 L 940 200
+    L 965 200 L 965 175 L 1005 175 L 1005 200
+    L 1030 200 L 1030 140 L 1060 140 L 1060 200
+    L 1080 200 L 1080 120 L 1100 120 L 1105 80 L 1110 120 L 1125 120 L 1125 200
+    L 1150 200 L 1150 180 L 1190 180 L 1190 200
+    L 1200 200 
+    L 1200 300 Z" 
+    fill="#52020a" />
+
+  <!-- Foreground City Skyline (Darker Blue-Black) -->
+  <path d="
+    M 0 300 
+    L 0 240
+    L 40 240 L 40 210 L 80 210 L 80 240
+    L 110 240 L 110 170 L 130 170 L 130 240
+    L 155 240 L 155 200 L 195 200 L 195 240
+    L 220 240 L 220 180 L 250 180 L 250 240
+    L 280 240 L 280 215 L 320 215 L 320 240
+    L 350 240 L 350 160 L 380 160 L 380 240
+    L 410 240 L 410 190 L 450 190 L 450 240
+    L 480 240 L 480 210 L 510 210 L 510 240
+    L 540 240 L 540 170 L 570 170 L 570 240
+    L 600 240 L 600 200 L 640 200 L 640 240
+    L 670 240 L 670 180 L 700 180 L 700 240
+    L 730 240 L 730 210 L 770 210 L 770 240
+    L 800 240 L 800 155 L 830 155 L 830 240
+    L 860 240 L 860 195 L 900 195 L 900 240
+    L 930 240 L 930 210 L 960 210 L 960 240
+    L 990 240 L 990 175 L 1020 175 L 1020 240
+    L 1050 240 L 1050 200 L 1090 200 L 1090 240
+    L 1120 240 L 1120 185 L 1150 185 L 1150 240
+    L 1180 240 L 1180 220 L 1200 220
+    L 1200 300 Z" 
+    fill="url(#city-grad)" />
+
+  <!-- Spider-Man Web Shooting Line -->
+  <path d="M 125,48 L 220,0" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" opacity="0.9" />
+
+  <!-- Swinging Spider-Man Cartoon (Left Side) -->
+  <g transform="translate(90, 30)">
+    <!-- Right leg (bent up) -->
+    <path d="M 30,55 Q 15,62 5,55 Q 0,45 10,40" fill="#0051C8" stroke="#000000" stroke-width="2" />
+    <path d="M 5,55 Q -2,65 -5,75 Q -5,80 -2,80 Q 5,80 8,70" fill="#E23636" stroke="#000000" stroke-width="2" />
+    
+    <!-- Left leg (extended down) -->
+    <path d="M 50,55 Q 52,72 58,82 Q 62,90 68,90 Q 72,82 65,75 L 58,58" fill="#0051C8" stroke="#000000" stroke-width="2" />
+    <path d="M 58,82 L 64,102 Q 68,106 74,102 Q 78,98 70,92 L 65,80" fill="#E23636" stroke="#000000" stroke-width="2" />
+
+    <!-- Torso -->
+    <path d="M 28,30 C 25,48 35,60 52,55 C 56,42 50,30 28,30 Z" fill="#E23636" stroke="#000000" stroke-width="2" />
+    <path d="M 34,32 C 30,42 35,52 46,48" fill="#0051C8" stroke="#000000" stroke-width="1.5" /> <!-- Blue side details -->
+    
+    <!-- Spider Logo on Chest -->
+    <path d="M 40,38 L 40,46 M 38,40 L 42,44 M 42,40 L 38,44" stroke="#000000" stroke-width="1.5" />
+
+    <!-- Left Arm (Holding Web) -->
+    <path d="M 48,32 Q 58,15 72,15 Q 75,18 70,22 Q 60,25 48,38" fill="#E23636" stroke="#000000" stroke-width="2" />
+    <!-- Web shooter glove -->
+    <circle cx="72" cy="16" r="4.5" fill="#E23636" stroke="#000000" stroke-width="1.5" />
+
+    <!-- Right Arm (Extended back) -->
+    <path d="M 28,32 Q 15,30 5,38 Q 0,42 5,46 Q 15,38 28,38" fill="#E23636" stroke="#000000" stroke-width="2" />
+
+    <!-- Head -->
+    <ellipse cx="32" cy="20" rx="13" ry="15" fill="#E23636" stroke="#000000" stroke-width="2" transform="rotate(-10 32 20)" />
+    <!-- Glowing white eyes with black borders -->
+    <path d="M 22,20 C 23,14 28,10 32,18 C 30,24 26,26 22,20 Z" fill="#ffffff" stroke="#000000" stroke-width="2" />
+    <path d="M 42,20 C 41,14 36,10 32,18 C 34,24 38,26 42,20 Z" fill="#ffffff" stroke="#000000" stroke-width="2" />
+    
+    <!-- Web lines on suit -->
+    <path d="M 28,30 Q 38,34 46,32 M 30,42 Q 38,46 48,42 M 32,50 Q 38,54 50,48" stroke="#000000" stroke-width="0.8" opacity="0.4" />
+  </g>
+
+  <!-- Title Text Section -->
+  <g transform="translate(640, 95)" filter="url(#shadow)">
+    <!-- Line 1: Friendly Neighborhood Developer: -->
+    <text x="0" y="0" 
+          font-family="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" 
+          font-size="34" 
+          font-weight="900" 
+          fill="#ffffff" 
+          stroke="#000000"
+          stroke-width="6"
+          paint-order="stroke fill"
+          text-anchor="middle"
+          letter-spacing="0.5">Friendly Neighborhood Developer:</text>
+
+    <!-- Line 2: AMITH RAJ V -->
+    <text x="0" y="65" 
+          font-family="'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif" 
+          font-size="64" 
+          font-weight="900" 
+          fill="#ffffff" 
+          stroke="#000000"
+          stroke-width="10"
+          paint-order="stroke fill"
+          text-anchor="middle"
+          letter-spacing="2">AMITH RAJ V</text>
+  </g>
+
+</svg>

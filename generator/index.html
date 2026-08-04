@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spider-Man GitHub Profile README Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@300;400;600;800;900&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="spidey-theme-exact">
+
+  <!-- Glow Background Accents -->
+  <div class="glow-orb red-orb"></div>
+  <div class="glow-orb blue-orb"></div>
+
+  <!-- Main App Layout -->
+  <div class="app-container">
+    
+    <!-- Top Header -->
+    <header class="app-header">
+      <div class="header-logo">
+        <svg viewBox="0 0 100 100" class="spidey-logo-svg" width="40" height="40">
+          <circle cx="50" cy="50" r="45" fill="none" stroke="var(--spidey-red)" stroke-width="2" />
+          <path d="M 50 15 L 50 85 M 15 50 L 85 50 M 25 25 L 75 75 M 25 75 L 75 25" stroke="var(--spidey-red)" stroke-opacity="0.3" stroke-width="1.5" />
+          <!-- Spider eyes -->
+          <path d="M 32 40 C 35 25 45 20 48 35 C 48 35 48 48 40 52 C 32 55 30 50 32 40 Z" fill="white" stroke="var(--spidey-red)" stroke-width="2" />
+          <path d="M 68 40 C 65 25 55 20 52 35 C 52 35 52 48 60 52 C 68 55 70 50 68 40 Z" fill="white" stroke="var(--spidey-red)" stroke-width="2" />
+        </svg>
+        <h1>SpideyProfile</h1>
+      </div>
+      <p class="tagline">Generate Stunning Spider-Man Themed GitHub READMEs & Banners</p>
+      
+      <!-- Theme Selector -->
+      <div class="theme-picker-container">
+        <label>Spider-Verse Theme:</label>
+        <div class="theme-buttons">
+          <button class="theme-btn active" data-theme="exact" style="--btn-color: #e31b23">Exact Style</button>
+          <button class="theme-btn" data-theme="classic" style="--btn-color: #E23636">Classic Spidey</button>
+          <button class="theme-btn" data-theme="miles" style="--btn-color: #ff0044">Miles Morales</button>
+          <button class="theme-btn" data-theme="gwen" style="--btn-color: #ff2e93">Spider-Gwen</button>
+          <button class="theme-btn" data-theme="venom" style="--btn-color: #a020f0">Symbiote Venom</button>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-content">
+      
+      <!-- Left Column: Input Form (Web-Shooter Inputs) -->
+      <aside class="control-panel glass-panel">
+        <h2 class="panel-title">🕸️ Customize Web-Shooters</h2>
+        
+        <form id="profile-form">
+          
+          <div class="form-section">
+            <h3>👁️ Hero Identity</h3>
+            <div class="form-group">
+              <label for="username">GitHub Username</label>
+              <input type="text" id="username" value="AMITH2529" required placeholder="e.g. AMITH2529">
+            </div>
+            <div class="form-group">
+              <label for="hero-name">Real Name / Handle</label>
+              <input type="text" id="hero-name" value="AMITH RAJ V" required placeholder="e.g. AMITH RAJ V">
+            </div>
+            <div class="form-group">
+              <label for="hero-title">Custom Title (Hero Role)</label>
+              <input type="text" id="hero-title" value="Friendly Neighborhood Developer:" placeholder="e.g. Friendly Neighborhood Developer:">
+            </div>
+            <div class="form-group">
+              <label for="hero-motto">Spidey Motto (Subtitle)</label>
+              <input type="text" id="hero-motto" value="With great data comes great responsibility." placeholder="With great data comes great responsibility">
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>📖 Origin Story</h3>
+            <div class="form-group">
+              <label for="origin-story">Origin Story Summary</label>
+              <textarea id="origin-story" rows="3">I am an AI & Machine Learning student with a strong interest in building intelligent AI applications. My "Spidey-Sense" tingles most when I'm working with Generative AI, NLP, and Deep Learning. Having completed an intensive Gen AI & Data Science Bootcamp, I build real-world AI systems, including RAG pipelines, chatbots, and prediction models.</textarea>
+            </div>
+            <div class="form-group">
+              <label for="origin-bullet1">Origin Detail 1 (Multiverse / Languages)</label>
+              <input type="text" id="origin-bullet1" value="🌍 Multiversal Communicator: Fluent in English, Kannada, Telugu, Hindi, and Tamil.">
+            </div>
+            <div class="form-group">
+              <label for="origin-bullet2">Origin Detail 2 (Sanctum / Education)</label>
+              <input type="text" id="origin-bullet2" value="🎓 Training at the Sanctum: Currently pursuing a B.E. in Artificial Intelligence & Machine Learning at The Oxford College of Engineering, Bangalore.">
+            </div>
+            <div class="form-group">
+              <label for="origin-bullet3">Origin Detail 3 (Tech Focus)</label>
+              <input type="text" id="origin-bullet3" value="🕸️ Web-Shooter Tech: Skilled in PyTorch, LangChain, FastAPI, and building Agentic AI.">
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>🛠️ Utility Belt (Tech Stack)</h3>
+            <div class="form-group">
+              <label>Select Your Tech Badges (Comma-separated)</label>
+              <input type="text" id="tech-skills" value="html,css,js,ts,react,nextjs,nodejs,python,pytorch,fastapi,postgres,mongodb,docker,git,github,vscode,figma" placeholder="e.g. python,pytorch,fastapi,git">
+              <small class="helper-text">Supports standard SkillIcons keyword identifiers</small>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>🏙️ Saved Cities (Featured Projects)</h3>
+            <div class="project-group">
+              <h4>Project 1</h4>
+              <div class="form-group">
+                <label for="p1-title">Title</label>
+                <input type="text" id="p1-title" value="🛡️ A.E.G.I.S. (AI Driven Spatial Systems)">
+              </div>
+              <div class="form-group">
+                <label for="p1-desc">Description</label>
+                <textarea id="p1-desc" rows="2">A browser-native generative spatial computing system enabling multimodal interaction and decentralized 3D environmental interaction. Uses skeletal hand tracking, WebSockets, and AI agents.</textarea>
+              </div>
+            </div>
+
+            <div class="project-group">
+              <h4>Project 2</h4>
+              <div class="form-group">
+                <label for="p2-title">Title</label>
+                <input type="text" id="p2-title" value="🏠 HOMEOPS-AI">
+              </div>
+              <div class="form-group">
+                <label for="p2-desc">Description</label>
+                <textarea id="p2-desc" rows="2">An elegant, local-first ambient home operating system powered by Gemini AI. Manages pantry inventory, predicts produce decay, automates chores with voice function calling.</textarea>
+              </div>
+            </div>
+
+            <div class="project-group">
+              <h4>Project 3</h4>
+              <div class="form-group">
+                <label for="p3-title">Title</label>
+                <input type="text" id="p3-title" value="🎵 Mood Playlist Generator">
+              </div>
+              <div class="form-group">
+                <label for="p3-desc">Description</label>
+                <textarea id="p3-desc" rows="2">A Python-based application designed to dynamically generate music playlists based on emotional sentiment and mood analysis.</textarea>
+              </div>
+            </div>
+          </div>
+          
+        </form>
+      </aside>
+
+      <!-- Right Column: Banner Previewer & Markdown Output -->
+      <main class="output-panel">
+        
+        <!-- Live Visual Preview Tab -->
+        <section class="preview-section glass-panel">
+          <div class="section-header">
+            <h2>👁️ Live Multi-verse Preview</h2>
+            <div class="preview-tabs">
+              <button class="tab-btn active" data-tab="banner">Banner Image</button>
+              <button class="tab-btn" data-tab="readme">Readme Markdown Profile</button>
+            </div>
+          </div>
+          
+          <div class="preview-content">
+            <!-- Banner SVG Preview container -->
+            <div id="banner-tab-content" class="tab-pane active">
+              <div class="svg-wrapper" id="svg-preview-container">
+                <!-- SVG injected dynamically -->
+              </div>
+              <div class="action-bar">
+                <button id="download-svg-btn" class="action-btn primary-btn">📥 Download Banner SVG</button>
+                <button id="download-png-btn" class="action-btn secondary-btn">🖼️ Export Banner PNG</button>
+              </div>
+            </div>
+
+            <!-- README Markdown rendering simulation -->
+            <div id="readme-tab-content" class="tab-pane">
+              <div class="readme-rendered-preview">
+                <!-- HTML approximation of README -->
+                <div class="readme-header-banner">
+                  <div class="capsule-wave-banner">
+                     <span class="capsule-wavy-text" id="readme-prev-title">AMITH RAJ V</span>
+                     <span class="capsule-wavy-desc" id="readme-prev-desc">With great data comes great responsibility</span>
+                  </div>
+                </div>
+                <div class="readme-profile-content">
+                  <h3 class="center-text italic" id="readme-prev-h3">🕸️ Aspiring AI Engineer | Generative AI & Data Science 🕸️</h3>
+                  <hr>
+                  <h4>🕷️ My Origin Story</h4>
+                  <p id="readme-prev-origin">I am an AI & Machine Learning student...</p>
+                  <ul>
+                    <li id="readme-prev-bullet1">🌍 Multiversal Communicator: ...</li>
+                    <li id="readme-prev-bullet2">🎓 Training: ...</li>
+                    <li id="readme-prev-bullet3">🕸️ Tech: ...</li>
+                  </ul>
+                  <hr>
+                  <h4>🛠️ The Web-Slinger's Utility Belt</h4>
+                  <div class="badges-row" id="readme-prev-badges">
+                    <!-- Badges render here -->
+                  </div>
+                  <hr>
+                  <h4>🏙️ Saving the City (Featured Projects)</h4>
+                  <div id="readme-prev-projects">
+                    <!-- Projects list -->
+                  </div>
+                  <hr>
+                  <h4>🐍 Symbiote Activity & Stats</h4>
+                  <div class="stats-row flex-center">
+                     <div class="stats-card-placeholder">Streak & Contributions (Red/Blue Spider-Man Theme)</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Markdown Code block section -->
+        <section class="code-section glass-panel">
+          <div class="section-header">
+            <h2>code block output - README.md</h2>
+            <button id="copy-markdown-btn" class="action-btn copy-btn">📋 Copy Markdown Code</button>
+          </div>
+          <div class="code-container">
+            <pre><code id="markdown-output-code">Copying your Spidey suits...</code></pre>
+          </div>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+
+  <footer class="app-footer-text">
+    <p>Created with absolute care for AMITH2529. With great projects comes great feedback! 🕷️</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
