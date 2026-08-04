@@ -72,9 +72,9 @@ A Python-based application designed to dynamically generate playlists based on e
 <div align="center">
   <!-- This image will be generated automatically by the Spider GitHub Action -->
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AMITH2529/AMITH2529/output/github-contribution-grid-spider-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AMITH2529/AMITH2529/output/github-contribution-grid-spider.svg">
-    <img alt="github contribution grid spider animation" src="https://raw.githubusercontent.com/AMITH2529/AMITH2529/output/github-contribution-grid-spider.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/AMITH2529/AMITH2529/main/art/github-contribution-grid-spider-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/AMITH2529/AMITH2529/main/art/github-contribution-grid-spider.svg">
+    <img alt="github contribution grid spider animation" src="https://raw.githubusercontent.com/AMITH2529/AMITH2529/main/art/github-contribution-grid-spider.svg">
   </picture>
 </div>
 
