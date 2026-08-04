@@ -15,6 +15,15 @@
     border-radius: 6px !important;
     padding: 18px !important;
     box-shadow: 0 0 15px rgba(227, 27, 35, 0.15) !important;
+    overflow: visible !important;
+  }
+
+  /* Force parent containers to show overflowing content (so Spidey is not cut off) */
+  .js-yearly-contributions,
+  .js-yearly-contributions > div,
+  .graph-before-activity-overview,
+  .ContributionCalendar {
+    overflow: visible !important;
   }
 
   /* Add crawling Spider-Man on top of the graph */
