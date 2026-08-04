@@ -5,11 +5,15 @@
 
 <h3 align="center">🕸️ Aspiring AI Engineer | Generative AI & Data Science 🕸️</h3>
 
-<p align="center">
-  <a href="https://github.com/AMITH2529">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=400&size=24&duration=3500&pause=1000&color=e31b23&center=true&vCenter=true&width=550&lines=Friendly%20Neighborhood%20Developer;AI%20Developer;Data%20Science%20Learner;Web%20Slinger" alt="Typing SVG" />
-  </a>
-</p>
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=E23636&center=true&vCenter=true&width=500&height=50&lines=Aspiring+AI+Engineer;Generative+AI+%26+Data+Science;Building+A.E.G.I.S.+Spatial+Systems;Friendly+Neighborhood+Developer" alt="Typing Animation" />
+</div>
+
+<div align="center">
+  <blockquote>
+    <i>"No matter how many times you get hit, you can always get back up. That's what makes us heroes."</i>
+  </blockquote>
+</div>
 
 ---
 
@@ -25,13 +29,21 @@ I am an AI & Machine Learning student with a strong interest in building intelli
 
 ### 🛠️ The Web-Slinger's Utility Belt
 
-**Languages, Frameworks & Toolkits (My Spidey-Sense)**
-<br>
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,nodejs,python,pytorch,fastapi,postgres,mongodb,docker,git,github,vscode,figma&perline=15" alt="Tech Stack" />
-  </a>
-</p>
+<div align="center">
+  <p>
+    <img src="https://img.shields.io/badge/Python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" />
+    <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="PyTorch" />
+    <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" alt="TensorFlow" />
+    <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" alt="LangChain" />
+  </p>
+  
+  <p>
+    <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+    <img src="https://img.shields.io/badge/Pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
+    <img src="https://img.shields.io/badge/Scikit--Learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />
+    <img src="https://img.shields.io/badge/Git-%23F05032.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  </p>
+</div>
 
 ---
 
